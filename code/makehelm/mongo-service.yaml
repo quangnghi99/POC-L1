@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo
+  name: {{ .value.mongo.name}}
 spec:
   selector:
-    app: mongo
+    app: {{ .value.mongo.name}}
   ports:
-    - port: 27017
-      targetPort: 27017
+    - port: {{ .value.mongo.port}}
+      targetPort: {{ .value.mongo.targetPort}}

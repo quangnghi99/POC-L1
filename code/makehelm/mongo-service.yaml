@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .value.mongo.name}}
+  name: {{ .Values.mongo.name}}
 spec:
   selector:
-    app: {{ .value.mongo.name}}
+    app: {{ .Values.mongo.name}}
   ports:
-    - port: {{ .value.mongo.port}}
-      targetPort: {{ .value.mongo.targetPort}}
+    - port: {{ .Values.mongo.port}}
+      targetPort: {{ .Values.mongo.targetPort}}

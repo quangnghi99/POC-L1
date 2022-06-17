@@ -4,9 +4,9 @@ metadata:
   name: student-app-client-service
 spec:
   selector:
-    app: {{ .value.client.name}}
+    app: {{ .Values.client.name}}
   ports:
-    - port: {{ .value.client.port}}
+    - port: {{ .Values.client.port}}
       protocol: TCP
-      targetPort: {{ .value.client.targetPort}}
+      targetPort: {{ .Values.client.targetPort}}
   type: ClusterIP

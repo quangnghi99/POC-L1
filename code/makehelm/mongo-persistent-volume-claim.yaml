@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ .value.volumes.name }}
+  name: {{ .Values.volumes.name }}
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: {{ .value.volumes.storage }}
+      storage: {{ .Values.volumes.storage }}

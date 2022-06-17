@@ -7,7 +7,7 @@ spec:
     matchLabels: {{ include "common.mongo" . | nindent 6}}
   template:
     metadata:
-      labels: {{ include "common.api" . | nindent 8 }}
+      labels: {{ include "common.mongo" . | nindent 8 }}
     spec:
       containers:
         - name: {{ .Values.mongo.name}}

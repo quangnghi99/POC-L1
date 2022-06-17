@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .value.api.name }}
+  name: {{ .Values.api.name }}
 spec:
   selector:
     matchLabels: {{ include "common.api" . | nindent 6}}
@@ -11,11 +11,11 @@ spec:
       labels: {{ include "common.api" . | nindent 8 }}
     spec:
       containers:
-        - name: {{ .value.api.name }}
-          image: {{ .value.api.image }}
+        - name: {{ .Values.api.name }}
+          image: {{ .Values.api.image }}
           imagePullPolicy: Always
           ports:
-            - containerPort: {{ .value.api.port }}
+            - containerPort: {{ .Values.api.port }}
           env:
             - name: MONGO_URL
               value: mongodb://mongo:27017/dev

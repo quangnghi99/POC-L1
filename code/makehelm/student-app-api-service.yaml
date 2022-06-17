@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .value.api.name }}
+  name: {{ .Values.api.name }}
 spec:
   selector:
-    app: {{ .value.api.name }}
+    app: {{ .Values.api.name }}
   ports:
-    - port: {{ .value.api.port }}
+    - port: {{ .Values.api.port }}
       protocol: TCP
-      targetPort: {{ .value.api.port }}
+      targetPort: {{ .Values.api.port }}

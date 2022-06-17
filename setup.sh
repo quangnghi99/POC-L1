@@ -1,6 +1,6 @@
 # docker 
 sudo yum update
-sudo yum install docker
+sudo yum install docker -y
 sudo usermod -a -G docker $USER 
 sudo service docker start
 
@@ -12,7 +12,8 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 #minikube
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
-minikube start
+sudo yum install conntrack -y
+minikube start --driver=none
 
 #helm
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3

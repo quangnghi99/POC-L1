@@ -13,3 +13,6 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 sudo yum install maven -y
 #maven home: /usr/share/maven
 #java home: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+
+sudo usermod -a -G docker jenkins
+reboot

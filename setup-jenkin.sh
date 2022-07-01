@@ -18,3 +18,5 @@ sudo yum install docker -y
 sudo service docker start
 sudo usermod -a -G docker jenkins
 reboot
+
+dockerpipeline

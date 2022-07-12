@@ -13,7 +13,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 sudo yum install conntrack -y
-minikube start --driver=none
+minikube start --driver=none --kubernetes-version v1.23.8
 
 #helm
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
